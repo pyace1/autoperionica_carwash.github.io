@@ -13,6 +13,7 @@
 
   <!-- Bootstrap Core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.css">
 
   <!-- Custom Fonts -->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -230,6 +231,17 @@
 	  kao što poštujete svoje vreme ! <span style="color: #ecb807">Žuti termini</span>
 	  u tabeli su vremenski termini koji rade samo leti ! Usled nedoumice oko rezervacije, kontaktirajte 
 	  nas lično <a href="tel:+381637319954" style="color: #ecb807">063 731 9954</a></p>
+	  
+	  <div class="col-lg-6 col-11 px-1">
+                <div class="input-group input-daterange"> 
+				  <label class="ml-3 form-control-placeholder" id="start-p" for="start">Datum za zakazivanje :</label>
+                <input type="text" id="start" class="form-control text-left mr-2"> 
+               <span class="fa fa-calendar" id="fa-1"></span> 
+                <!--<input type="text" id="end" class="form-control text-left ml-2">
+                <label class="ml-3 form-control-placeholder" id="end-p" for="end">End Date</label> <span class="fa fa-calendar" id="fa-2"></span> -->
+				</div>
+            </div>
+				
 	  <table style="width:100% ; border: 1px solid white">
 		  <tr>
 			<th></th>
@@ -315,6 +327,8 @@
 		</table><br>
       <a href="#" class="btn btn-xl btn-light mr-4">Potvrdi rezervaciju !</a>
       <a href="#" class="btn btn-xl btn-dark">Obrisi rezervaciju !</a>
+	  
+   
     </div>
   </section>
 
@@ -365,9 +379,24 @@
 
   <!-- Plugin JavaScript -->
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.js"></script>
+  <script>
+	  $(document).ready(function(){
+
+	$('.input-daterange').datepicker({
+	format: 'dd-mm-yyyy',
+	autoclose: true,
+	calendarWeeks : true,
+	clearBtn: true,
+	disableTouchKeyboard: true
+	});
+
+	});
+  </script>
 
   <!-- Custom scripts for this template -->
   <script src="js/stylish-portfolio.min.js"></script>
+
 
 </body>
 
